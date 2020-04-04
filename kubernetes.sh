@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo su
 swapoff -a
 vim /etc/fstab
 vim /etc/hosts
