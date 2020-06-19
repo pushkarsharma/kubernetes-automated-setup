@@ -8,7 +8,7 @@ chmod +x kvm.sh
 ./kvm.sh
 ```
 
-&#x1F534; Now, fix the error in KVM with the steps under [KVM/QEMU & libvirt Installation](https://github.com/pushkarsharma/kubernetes-setup#kvmqemu--libvirt-installation)
+&#x1F534; Now, fix the error in KVM with the steps under [KVM/QEMU & libvirt Verification](https://github.com/pushkarsharma/kubernetes-setup#kvmqemu--libvirt-verification)
 
 To install kubectl, minikube use the following commands:
 
