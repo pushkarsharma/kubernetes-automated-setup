@@ -2,7 +2,7 @@
 
 <h1>Local Installation</h1>
 
-To install KVM, libvirt use the following commands:
+To install KVM, libvirt:
 ```
 chmod +x kvm.sh
 ./kvm.sh
@@ -10,12 +10,18 @@ chmod +x kvm.sh
 
 &#x1F534; Now, fix the error in KVM with the steps under [KVM/QEMU & libvirt Verification](https://github.com/pushkarsharma/kubernetes-setup#kvmqemu--libvirt-verification)
 
-To install kubectl, minikube use the following commands:
+To install kubectl, minikube:
 
 ```
 chmod +x start.sh kubectl.sh minikube.sh
 ./start.sh
 ```
+
+<strong>(Optional) Set `kvm2` as default driver for minikube:</strong>
+```
+minikube config set vm-driver kvm2
+```
+
 KVM, libvirt, kubectl, minikube should be installed now. Check their status with the steps ahead.
 
 <h2>KVM/QEMU & libvirt Verification</h2>
@@ -46,9 +52,21 @@ sudo reboot
 
 <h2>Minikube Verification</h2>
 
-After installation check Minikube status with the following command:
+After installation check Minikube status:
 ```
 minikube version
+```
+
+<h2>Starting the cluster</h2>
+
+To start the cluster:<br>
+If default `vm-driver` was set before.
+```
+minikube start
+```
+If default `vm-driver` was <strong>NOT</strong> set before.
+```
+minikube start --vm-driver kvm2
 ```
 
 ---
