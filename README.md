@@ -2,7 +2,23 @@
 
 <h1>Local Installation</h1>
 
-<h2>KVM/QEMU & libvirt Installation</h2>
+To install KVM, libvirt use the following commands:
+```
+chmod +x kvm.sh
+./kvm.sh
+```
+
+&#x1F534; Now, fix the error in KVM with the steps under [KVM/QEMU & libvirt Installation](https://github.com/pushkarsharma/kubernetes-setup#kvmqemu--libvirt-installation)
+
+To install kubectl, minikube use the following commands:
+
+```
+chmod +x start.sh kubectl.sh minikube.sh
+./start.sh
+```
+KVM, libvirt, kubectl, minikube should be installed now. Check their status with the steps ahead.
+
+<h2>KVM/QEMU & libvirt Verification</h2>
 
 [KVM Installation Reference](https://kubernetes.io/blog/2019/03/28/running-kubernetes-locally-on-linux-with-minikube-now-with-kubernetes-1.14-support/#qemu-kvm-and-libvirt-installation)
 
@@ -26,6 +42,13 @@ sudo update-grub or grub-mkconfig -o /boot/grub/grub.cfg
 Finally,
 ```
 sudo reboot
+```
+
+<h2>Minikube Verification</h2>
+
+After installation check Minikube status with the following command:
+```
+minikube version
 ```
 
 ---
