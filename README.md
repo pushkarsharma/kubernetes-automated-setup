@@ -12,7 +12,7 @@ sudo virt-host-validate
 ```
 #
 &#x1F534;[IOMMU Error Reference](https://www.reddit.com/r/linuxquestions/comments/bgbpim/how_to_enable_iommu_on_ubuntu_1804/):
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you see error <strong>`iommu appears to be disabled in kernel. add intel_iommu=on to kernel cmdline arguments`</strong> then follow the following steps:<br>
+If you see error <strong>`iommu appears to be disabled in kernel. add intel_iommu=on to kernel cmdline arguments`</strong> then follow the following steps:<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Edit `/etc/default/grub` and add the option `"intel_iommu=on"` to `GRUB_CMDLINE_LINUX` or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`GRUB_CMDLINE_LINUX_DEFAULT`:<br>
 ```
