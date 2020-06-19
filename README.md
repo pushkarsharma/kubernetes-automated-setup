@@ -69,6 +69,13 @@ If default `vm-driver` was <strong>NOT</strong> set before.
 minikube start --vm-driver kvm2
 ```
 
+<h2>Verify the Kubernetes installation</h2>
+
+Check if the Kubernetes cluster is up and running:
+```
+kubectl get nodes
+```
+
 ---
 <h1>Cluster Deployement</h1>
 
