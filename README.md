@@ -8,7 +8,7 @@ Follow the steps below for cluster deployement:
 2. `sudo su`
 3. `./start.sh`
 4. Comment out the line which has mention of swap partition in the file that opens (`/etc/fstab`).
-5. Add the hostnames in the next opened file (`/etc/hostname`).
+5. Add the hostnames of Master & Kubelets VMs in the next opened file (`/etc/hostname`).
 6. Add `Environment="cgroup-driver=systemd/cgroup-driver=cgroupfs"` in the next opened file (`/etc/systemd/system/kubelet.service.d/10-kubeadm.conf`)
 
 <h3>Master VM</h3>
