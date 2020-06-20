@@ -97,7 +97,7 @@ Follow the steps below for cluster deployement:
 &#x1F534;**It will give the join statement for kubelet nodes (KEEP IT!)<br>
 &#x1F534;The output will ask to execute the following commands (CROSS CHECK ALWAYS):**
 
-8. Come back to regular user from SuperUser profile.
+8. <strong>Come back to regular user from SuperUser profile.</strong>
 9. `mkdir -p $HOME/.kube`<br>
 10. `cp -i /etc/kubernetes/admin.conf $HOME/.kube/config`<br>
 11. `chown $(id -u):$(id -g) $HOME/.kube/config`<br>
