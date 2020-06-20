@@ -97,18 +97,19 @@ Follow the steps below for cluster deployement:
 &#x1F534;**It will give the join statement for kubelet nodes (KEEP IT!)<br>
 &#x1F534;The output will ask to execute the following commands (CROSS CHECK ALWAYS):**
 
-8. `mkdir -p $HOME/.kube`<br>
-9. `cp -i /etc/kubernetes/admin.conf $HOME/.kube/config`<br>
-10. `chown $(id -u):$(id -g) $HOME/.kube/config`<br>
-11. Verify the cluster with `kubectl get pods -o wide --all-namespaces`
+8. Come back to regular user from SuperUser profile.
+9. `mkdir -p $HOME/.kube`<br>
+10. `cp -i /etc/kubernetes/admin.conf $HOME/.kube/config`<br>
+11. `chown $(id -u):$(id -g) $HOME/.kube/config`<br>
+12. Verify the cluster with `kubectl get pods -o wide --all-namespaces`
 
 &#x1F534;**You will notice from the previous command, that all the pods are running except one: ‘kube-dns’. For resolving this we will install a pod network. To install the CALICO pod network, run the following command:**
 
-12. `kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml`
+13. `kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml`
 
 <h3>Kubelet VM</h3>
 
-13. Connect the Kubelet to the cluster using the statement saved from `7` output that looks like: `kubeadm join <IP>:<PORT> --token <TOKEN> --discovery-token-ca-cert-hash <SHA256-VALUE>`
-14. Check nodes' health with `kubectl get nodes`.
+14. Connect the Kubelet to the cluster using the statement saved from `7` output that looks like: `kubeadm join <IP>:<PORT> --token <TOKEN> --discovery-token-ca-cert-hash <SHA256-VALUE>`
+15. Check nodes' health with `kubectl get nodes`.
 
 <h3>Kubernetes cluster is deployed. Yay!</h3>
