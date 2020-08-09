@@ -1,4 +1,4 @@
-# kubernetes-setup
+# kubernetes-automated-setup
 
 <h1>Local Installation</h1>
 
